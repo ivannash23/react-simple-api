@@ -8,12 +8,13 @@ class Results extends Component {
         <Row>
           {this.props.searchResults.map((item, index) => (
             <Col key={index} lg={2} md={3} sm={3} xs={12}>
-              <img
-                className="img-fluid"
-                alt="Responsive image"
-                href={item.source}
-                src={item.images.original.url}
-              />
+              <a href={item.source}>
+                <img
+                  className="img-fluid"
+                  alt="Responsive image"
+                  src={item.images.original.url}
+                />
+              </a>
             </Col>
           ))}
         </Row>
